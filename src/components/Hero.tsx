@@ -1,22 +1,37 @@
+import { useRef, useEffect } from "react";
+
 
 export default function Hero() {
-  return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-zinc-950 px-4 text-center">
+      const videoRef = useRef<HTMLVideoElement>(null);
+
+        useEffect(() => {
+        const timer = setTimeout(() => {
+        videoRef.current?.play();
+        },);
+
+        return () => clearTimeout(timer);
+        }, []);
+
+    return (
+        <div className="relative h-screen w-full overflow-hidden">
+        <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute"
+      >
+        <source src="/rainynight.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-indigo-500 to-cyan-400 text-transparent bg-clip-text">
         SigmaBlog
       </h1>
       <p className="mt-4 max-w-xl text-zinc-400 text-lg md:text-xl">
-        Building. Breaking. Blogging. A dev journal from the mind of Sigmabond —
-        raw thoughts, shipped code, and lessons from the trenches.
+        Personal dev blog about my journey
       </p>
-      <div className="mt-6">
-        <a
-          href="#blogs"
-          className="inline-block rounded-2xl border border-cyan-500 px-6 py-3 text-cyan-400 hover:bg-cyan-500 hover:text-zinc-950 transition font-medium"
-        >
-          Read the Blog
-        </a>
       </div>
-    </section>
   );
 }
