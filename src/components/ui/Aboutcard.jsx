@@ -4,13 +4,13 @@ const Aboutcard = () => {
   return (
     <div className="flex">
     <BackgroundGradientAnimation>
-      <div className="relative z-10 w-full max-w-4xl px-4 py-8 mx-auto font-mincho">
+      <div className="relative z-10 w-full max-w-4xl px-4 py-24 mx-auto font-mincho">
         <div className="space-y-6">
           <div className="text-center border-b border-pink-500/30 pb-4">
             <h2 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent mb-2">
               コーディング哲学 • Coding Philosophy
             </h2>
-            <p className="text-gray-300 font-mono text-xs md:text-sm">
+            <p className="text-gray-300 text-xs md:text-sm">
               How I approach building, learning, and sharing in public.
             </p>
           </div>
@@ -39,32 +39,19 @@ const Aboutcard = () => {
             <h3 className="text-purple-400 font-bold mb-3 flex items-center">
               <span className="text-sm md:text-base">現在学習中 • Currently Learning</span>
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm text-gray-300 font-mono">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm text-gray-300">
               <LearningItem color="cyan" label="Japanese (N4 目標)" />
-              <LearningItem color="purple" label="Backend Architecture" />
+              <LearningItem color="purple" label="Backend Stuff" />
               <LearningItem color="blue" label="Database Design" />
               <LearningItem color="green" label="Technical Writing" />
             </div>
           </div>
           <div className="text-center pt-4 border-t border-pink-500/30">
-            <p className="text-gray-400 text-xs md:text-sm italic font-mono leading-relaxed">
+            <p className="text-gray-400 text-xs md:text-sm italic leading-relaxed">
               "I don't chase likes. I chase leverage.
               <br />
               <span className="text-pink-400">やれば、できる。</span> • If I do it, I can do it."
             </p>
-          </div>
-
-          <div className="text-center mt-6 md:mt-8">
-            <p className="text-gray-500 text-xs md:text-sm font-mono">
-              <span className="text-pink-400">@sigmabond</span> •
-              <span className="text-cyan-400 ml-2">深夜のコーディング</span> •
-              <span className="ml-2">Building in the neon glow</span>
-            </p>
-            <div className="flex justify-center mt-2 space-x-1">
-              <PulseDot color="pink" />
-              <PulseDot color="purple" delay="100" />
-              <PulseDot color="cyan" delay="200" />
-            </div>
           </div>
         </div>
       </div>
@@ -74,13 +61,11 @@ const Aboutcard = () => {
 };
 
 const Card = ({ color,title, text }) => (
-  <div
-    className={`bg-gradient-to-r from-${color}-900/20 to-${color === "pink" ? "purple" : color}-900/20 p-4 rounded-lg border border-${color}-500/20 hover:border-${color}-400 transition-all duration-300 transform hover:scale-105`}
-  >
+  <div>
     <h3 className={`text-${color}-400 font-bold mb-2 flex items-center`}>
       <span className="text-sm md:text-base">{title}</span>
     </h3>
-    <p className="text-gray-300 text-xs md:text-sm font-mono leading-relaxed">
+    <p className="text-gray-300 text-xs md:text-sm leading-relaxed">
       {text}
     </p>
   </div>
