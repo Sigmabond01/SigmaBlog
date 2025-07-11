@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { About } from './components/About';
 import Hero from './components/Hero';
+import JapaneseNightlifeAboutCards from './components/ui/Aboutcard';
 
 function App() {
   const aboutRef = useRef(null);
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
       <Hero />
-      <div ref={aboutRef}><About /></div>
+      <div ref={aboutRef}><JapaneseNightlifeAboutCards/></div>
     </>
   );
 }

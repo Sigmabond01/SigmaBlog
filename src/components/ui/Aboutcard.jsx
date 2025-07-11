@@ -1,79 +1,102 @@
-import React from 'react';
-import styled from 'styled-components';
+import { BackgroundGradientAnimation } from "./bg-gradient-animation";
 
 const Aboutcard = () => {
   return (
-    <StyledWrapper>
-      <div className="card">
-        <div className="card-overlay" />
-        <div className="card-inner">
-          <p>
-            I go by <strong>Sigmabond</strong> — dev, builder, and engineering student navigating the chaos of code and creation.
-            <br /><br />
-            I started this blog to document the unfiltered journey: the things I build, the lessons I bleed for, and the mindset it takes to go from average to lethal.
-            <br /><br />
-            This isn’t a portfolio. It’s proof of work.
-          </p>
+    <div className="flex">
+    <BackgroundGradientAnimation>
+      <div className="relative z-10 w-full max-w-4xl px-4 py-8 mx-auto font-mincho">
+        <div className="space-y-6">
+          <div className="text-center border-b border-pink-500/30 pb-4">
+            <h2 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+              コーディング哲学 • Coding Philosophy
+            </h2>
+            <p className="text-gray-300 font-mono text-xs md:text-sm">
+              How I approach building, learning, and sharing in public.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <Card
+              color="pink"
+              title="速く出荷、速く学ぶ • Ship Fast, Learn Faster"
+              text="I don't wait for perfect. I ship, gather feedback, and iterate.
+              Every deployment is a learning opportunity. This blog is my public changelog — no highlight reels."
+            />
+            <Card
+              color="cyan"
+              title="公開で構築 • Build in Public"
+              text="Late nights, broken code, breakthrough moments — I document it all.
+              This isn't just about the wins. It's about the process, the struggles, and the journey of figuring it out."
+            />
+            <Card
+              color="yellow"
+              title="目的のあるコード • Code with Purpose"
+              text="Every line should solve a real problem. I'm not interested in building for vanity metrics.
+              I build tools that actually help people get things done."
+            />
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 p-4 rounded-lg border border-purple-500/20 hover:border-purple-400 transition-all duration-300">
+            <h3 className="text-purple-400 font-bold mb-3 flex items-center">
+              <span className="text-sm md:text-base">現在学習中 • Currently Learning</span>
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm text-gray-300 font-mono">
+              <LearningItem color="cyan" label="Japanese (N4 目標)" />
+              <LearningItem color="purple" label="Backend Architecture" />
+              <LearningItem color="blue" label="Database Design" />
+              <LearningItem color="green" label="Technical Writing" />
+            </div>
+          </div>
+          <div className="text-center pt-4 border-t border-pink-500/30">
+            <p className="text-gray-400 text-xs md:text-sm italic font-mono leading-relaxed">
+              "I don't chase likes. I chase leverage.
+              <br />
+              <span className="text-pink-400">やれば、できる。</span> • If I do it, I can do it."
+            </p>
+          </div>
+
+          <div className="text-center mt-6 md:mt-8">
+            <p className="text-gray-500 text-xs md:text-sm font-mono">
+              <span className="text-pink-400">@sigmabond</span> •
+              <span className="text-cyan-400 ml-2">深夜のコーディング</span> •
+              <span className="ml-2">Building in the neon glow</span>
+            </p>
+            <div className="flex justify-center mt-2 space-x-1">
+              <PulseDot color="pink" />
+              <PulseDot color="purple" delay="100" />
+              <PulseDot color="cyan" delay="200" />
+            </div>
+          </div>
         </div>
       </div>
-    </StyledWrapper>
+    </BackgroundGradientAnimation>
+    </div>
   );
 };
 
-const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+const Card = ({ color,title, text }) => (
+  <div
+    className={`bg-gradient-to-r from-${color}-900/20 to-${color === "pink" ? "purple" : color}-900/20 p-4 rounded-lg border border-${color}-500/20 hover:border-${color}-400 transition-all duration-300 transform hover:scale-105`}
+  >
+    <h3 className={`text-${color}-400 font-bold mb-2 flex items-center`}>
+      <span className="text-sm md:text-base">{title}</span>
+    </h3>
+    <p className="text-gray-300 text-xs md:text-sm font-mono leading-relaxed">
+      {text}
+    </p>
+  </div>
+);
 
-  .card {
-    --bg: #0b0f1a;
-    --contrast: #111827;
-    --grey: #27272a;
-    position: relative;
-    padding: 12px;
-    background-color: var(--bg);
-    border-radius: 35px;
-    box-shadow: 
-      rgba(72, 43, 150, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.5) 0px 30px 60px -30px,
-      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    max-width: 400px;
-    width: 100%;
-  }
+const LearningItem = ({ color, label }) => (
+  <div className="flex items-center gap-2">
+    <span className={`w-2 h-2 bg-${color}-500 rounded-full animate-pulse`}></span>
+    {label}
+  </div>
+);
 
-  .card-overlay {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: repeating-conic-gradient(var(--bg) 0.0000001%, var(--grey) 0.000104%) 60% 60%/600% 600%;
-    filter: opacity(8%) contrast(105%);
-    border-radius: 35px;
-  }
-
-  .card-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    background-color: var(--contrast);
-    border-radius: 30px;
-    padding: 1.5rem;
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #cbd5e1; /* slate-300 */
-    text-align: center;
-    font-family: 'Fira Code', monospace;
-    line-height: 1.6;
-  }
-
-  strong {
-    color: #7f5af0; /* signature violet */
-    font-weight: 700;
-  }
-`;
+const PulseDot = ({ color, delay }) => (
+  <div
+    className={`w-2 h-2 bg-${color}-500 rounded-full animate-pulse ${delay ? `delay-${delay}` : ""}`}
+  ></div>
+);
 
 export default Aboutcard;
