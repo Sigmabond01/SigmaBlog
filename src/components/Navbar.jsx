@@ -29,21 +29,21 @@ function Navbar({ className }) {
       )}
     >
       <Menu setActive={setActive} className="flex flex-wrap justify-center gap-4 sm:gap-6">
-        <div onClick={() => handleNavigate("/Videos")}>
-          <MenuItem setActive={setActive} active={active} item="Blogs" />
+        <div onClick={() => handleNavigate("/Home")}>
+          <MenuItem setActive={setActive} active={active} item="Home" />
         </div>
 
-        <div onClick={() => handleNavigate("/Synopsis")}>
-          <MenuItem setActive={setActive} active={active} item="Github" />
+        <div onClick={() => handleNavigate("/About")}>
+          <MenuItem setActive={setActive} active={active} item="About" />
         </div>
 
-        <div onClick={() => handleNavigate("/Gallery")}>
-          <MenuItem setActive={setActive} active={active} item="Twitter" />
+        <div onClick={() => handleNavigate("/Blogs")}>
+          <MenuItem setActive={setActive} active={active} item="Blog" />
         </div>
 
         <div>
-          <a href="https://lnk.to/SupermanSDTK" target="_blank">
-          <MenuItem setActive={setActive} active={active} item="LinkedIn" />
+          <a href="https://linktr.ee/Sigmabond01" target="_blank">
+          <MenuItem setActive={setActive} active={active} item="Socials" />
           </a>
         </div>
       </Menu>

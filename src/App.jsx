@@ -1,12 +1,26 @@
 
-import './App.css'
-import Hero2 from './components/Hero2'
+import React, { useRef, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { About } from './components/About';
+import Hero from './components/Hero';
 
 function App() {
+  const aboutRef = useRef(null);
+  const location = useLocation();
+
+  // scroll to section when URL changes
+  useEffect(() => {
+    const section = location.pathname.replace('/', '').toLowerCase();
+    if (section === 'about') aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [location]);
 
   return (
-    <Hero2 />
-  )
+    <>
+      <Hero />
+      <div ref={aboutRef}><About /></div>
+    </>
+  );
 }
 
-export default App
+export default App;
+

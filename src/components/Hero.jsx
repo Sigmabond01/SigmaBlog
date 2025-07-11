@@ -1,40 +1,22 @@
-import { useRef, useEffect } from "react";
 import { NavbarDemo } from "./Navbar";
 import Button from "./ui/StartedButton";
 import AnimatedBlogText from "./ui/Animatedlogo";
 
 export default function Hero() {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-    video.play();
-    const loopInterval = setInterval(() => {
-      video.currentTime = 0;
-      video.play();
-    }, 5000);
-
-    return () => clearInterval(loopInterval);
-  }, []);
-
   return (
     <div className="relative h-screen w-full overflow-hidden">
       <NavbarDemo />
 
-      <video
-        ref={videoRef}
-        muted
-        playsInline
-        autoPlay
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-      >
-        <source src="/torotoro.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* Background Image */}
+      <div 
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat z-0"
+        style={{
+          backgroundImage: "url('/street.jpg')"
+        }}
+      />
 
       {/* Black Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-[5]" />
+      <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-[5] backdrop-blur-sm" />
 
       {/* Logo Top Left */}
       <a
@@ -53,9 +35,12 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 font-mincho">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 font-mincho font-semibold">
+        <h1 className="text-white text-6xl">
+          Everything I Build. Everything I Learn. All Here.
+        </h1>
         <p className="mt-4 max-w-xl text-zinc-300 text-lg md:text-xl">
-          Personal dev blog about my journey
+          Personal dev blog.
         </p>
       </div>
     </div>
