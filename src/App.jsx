@@ -1,33 +1,49 @@
-
-import React, { useRef, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { About } from './components/About';
-import Hero from './components/Hero';
-import { Contact } from './components/Contact';
+import { useRef, useEffect, useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Hero from "./components/Hero";
+import { About } from "./components/About";
+import { Contact } from "./components/Contact";
+import BlogList from "./blog/BlogList";
+import BlogPost from "./blog/BlogPost";
 
 function App() {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
   const location = useLocation();
+  const [hasNavigated, setHasNavigated] = useState(false);
 
-  // scroll to section when URL changes
   useEffect(() => {
-    const section = location.pathname.replace('/', '').toLowerCase();
-    if (section === 'about') {
-      aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
-    } else if (section === 'contact') {
-      contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // skip initial render (page refresh)
+    if (!hasNavigated) {
+      setHasNavigated(true);
+      return;
+    }
+
+    const section = location.state?.scrollTo;
+
+    if (section === "about") {
+      aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+    } else if (section === "contact") {
+      contactRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
 
   return (
-    <>
-      <Hero />
-      <div ref={aboutRef}><About /></div>
-      <div ref={contactRef}><Contact /></div>
-    </>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Hero />
+            <div ref={aboutRef}><About /></div>
+            <div ref={contactRef}><Contact /></div>
+          </>
+        }
+      />
+      <Route path="/blogs" element={<BlogList />} />
+      <Route path="/blog/:id" element={<BlogPost />} />
+    </Routes>
   );
-};
+}
 
 export default App;
-

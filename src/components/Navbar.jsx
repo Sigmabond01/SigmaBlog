@@ -1,4 +1,4 @@
-// src/components/ui/NavbarDemo.jsx
+// src/components/ui/Navbar.jsx
 "use client";
 import React, { useState } from "react";
 import { Menu, MenuItem } from "./ui/navbar.jsx";
@@ -17,8 +17,8 @@ function Navbar({ className }) {
   const [active, setActive] = useState(null);
   const navigate = useNavigate();
 
-  const handleNavigate = (path) => {
-    navigate(path);
+  const handleNavigate = (scrollTo) => {
+    navigate("/", { state: { scrollTo } });
   };
 
   return (
@@ -29,21 +29,25 @@ function Navbar({ className }) {
       )}
     >
       <Menu setActive={setActive} className="flex flex-wrap justify-center gap-4 sm:gap-6">
-        <div onClick={() => handleNavigate("/Home")}>
+        <div onClick={() => navigate("/")}>
           <MenuItem setActive={setActive} active={active} item="Home" />
         </div>
 
-        <div onClick={() => handleNavigate("/About")}>
+        <div onClick={() => handleNavigate("about")}>
           <MenuItem setActive={setActive} active={active} item="About" />
         </div>
 
-        <div onClick={() => handleNavigate("/Blogs")}>
+        <div onClick={() => navigate("/blogs")}>
           <MenuItem setActive={setActive} active={active} item="Blog" />
         </div>
 
+        <div onClick={() => handleNavigate("contact")}>
+          <MenuItem setActive={setActive} active={active} item="Contact" />
+        </div>
+
         <div>
-          <a href="https://linktr.ee/Sigmabond01" target="_blank">
-          <MenuItem setActive={setActive} active={active} item="Socials" />
+          <a href="https://linktr.ee/Sigmabond01" target="_blank" rel="noreferrer">
+            <MenuItem setActive={setActive} active={active} item="Socials" />
           </a>
         </div>
       </Menu>
