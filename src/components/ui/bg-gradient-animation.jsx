@@ -3,14 +3,13 @@ import { cn } from "../../lib/utils";
 import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradientAnimation = ({
-  gradientBackgroundStart = "#0b0f1a",
-  gradientBackgroundEnd = "#111827",
-  firstColor = "27, 42, 71",
-  secondColor = "102, 51, 153",
-  thirdColor = "54, 88, 144",
-  fourthColor = "153, 0, 76",
-  fifthColor = "33, 33, 33",
-  pointerColor = "180, 100, 255",
+  gradientBackgroundStart = "#0b1220",         // Deep Night Blue
+  gradientBackgroundEnd = "#1c2e4d",           // Desaturated Indigo
+  firstColor = "11, 18, 32",                   // Darkest base
+  secondColor = "28, 46, 77",                  // Secondary shadows
+  thirdColor = "38, 70, 110",                  // Cool cyan light
+  fourthColor = "60, 79, 102",                 // Urban steel
+  fifthColor = "88, 116, 153",                 // Subtle neon highlight
   size = "80%",
   blendingValue = "soft-light",
   children,
@@ -33,7 +32,6 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--third-color", thirdColor);
     document.body.style.setProperty("--fourth-color", fourthColor);
     document.body.style.setProperty("--fifth-color", fifthColor);
-    document.body.style.setProperty("--pointer-color", pointerColor);
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
   }, []);

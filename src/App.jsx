@@ -5,6 +5,7 @@ import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import BlogList from "./blog/BlogList";
 import BlogPost from "./blog/BlogPost";
+import { Footer } from "./components/Footer";
 
 function App() {
   const aboutRef = useRef(null);
@@ -13,7 +14,6 @@ function App() {
   const [hasNavigated, setHasNavigated] = useState(false);
 
   useEffect(() => {
-    // skip initial render (page refresh)
     if (!hasNavigated) {
       setHasNavigated(true);
       return;
@@ -37,6 +37,7 @@ function App() {
             <Hero />
             <div ref={aboutRef}><About /></div>
             <div ref={contactRef}><Contact /></div>
+            <Footer />
           </>
         }
       />

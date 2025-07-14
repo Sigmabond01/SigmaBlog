@@ -40,11 +40,7 @@ function Navbar({ className }) {
         <div onClick={() => navigate("/blogs")}>
           <MenuItem setActive={setActive} active={active} item="Blog" />
         </div>
-
-        <div onClick={() => handleNavigate("contact")}>
-          <MenuItem setActive={setActive} active={active} item="Contact" />
-        </div>
-
+        
         <div>
           <a href="https://linktr.ee/Sigmabond01" target="_blank" rel="noreferrer">
             <MenuItem setActive={setActive} active={active} item="Socials" />

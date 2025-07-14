@@ -1,5 +1,5 @@
 import { NavbarDemo } from "./Navbar";
-import Button from "./ui/StartedButton";
+import Button from "./ui/ContactButton";
 import AnimatedBlogText from "./ui/Animatedlogo";
 
 export default function Hero() {
