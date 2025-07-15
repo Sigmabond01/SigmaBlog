@@ -10,7 +10,7 @@ const BlogHeader = () => {
         rel="noopener noreferrer"
         className="absolute -top-3 left-12 z-20"
       >
-        <div className="w-48 h-44">
+        <div className="w-48 h-44 hidden sm:block">
           <AnimatedBlogText />
         </div>
       </a>
