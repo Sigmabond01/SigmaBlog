@@ -24,7 +24,7 @@ export default function LoadingScreen() {
     <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center text-white">
       <div
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
-        style={{ backgroundImage: "url('/aojp.jpg')" }}
+        style={{ backgroundImage: "url('/aojp.webp')" }}
       />
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-10" />
       <div className="relative z-20 text-center space-y-6">

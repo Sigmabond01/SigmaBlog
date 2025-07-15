@@ -1,6 +1,6 @@
 export const Contact = () => {
     return(
-        <div className="min-h-screen w-full font-mincho bg-cover bg-center bg-[url('/japansky.jpg')] relative">
+        <div className="min-h-screen w-full font-mincho bg-cover bg-center bg-[url('/japansky.webp')] relative">
             <div className="absolute inset-0 bg-black/20 backdrop-blur-m"></div>
             <div className="relative z-10 flex items-center justify-center px-4 min-h-screen">
             <div className="bg-black/70 p-8 md:p-12 rounded-2xl shadow-2xl w-full max-w-2xl space-y-6">

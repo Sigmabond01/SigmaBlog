@@ -11,7 +11,7 @@ export default function Hero() {
       <div 
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat z-0"
         style={{
-          backgroundImage: "url('/street.jpg')"
+          backgroundImage: "url('/street.webp')"
         }}
       />
 

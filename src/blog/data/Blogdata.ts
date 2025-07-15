@@ -85,7 +85,7 @@ export const blogPosts: BlogPost[] = [
 <br />
 
 <h3>Step 4: The Final Stage</h3>
-
+<br />
 <p>Please don’t try to learn all the vocabulary, grammar, and immerse in content all at once. This is a <strong>crucial mistake</strong> made by many.</p>
 
 <p>I would suggest you do a little bit of everything or just go with what you want to learn.</p>
@@ -94,11 +94,11 @@ export const blogPosts: BlogPost[] = [
 
 <p>If you want to follow a structured path, you can check out the website I made:<br />
 KIBAN - <a href="https://kiban-one.vercel.app" target="_blank">https://kiban-one.vercel.app</a></p>
-
+<br />
 <p>Well then, thank you for reading this blog and hope to see you later. (^_^)</p>
 `
 ,
-    date: "2025-07-15",
+    date: "2025-07-16",
     readTime: "3 min read",
     tags: ["Japan", "Japanese", "language"]
   },
