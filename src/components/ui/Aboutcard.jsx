@@ -58,7 +58,7 @@ const Aboutcard = () => {
               <p className="text-gray-400 text-xs md:text-sm italic leading-relaxed">
                 I hope you enjoy the content I share here (^_^)
                 <br />
-                <span className="text-cyan-400">必要なことだけ。</span> • Only what's necessary.
+                <span className="text-cyan-400">必要なことだけ。</span>Only what's necessary.
               </p>
             </div>
           </div>

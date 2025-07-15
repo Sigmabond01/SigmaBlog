@@ -17,7 +17,10 @@
     "motion": "^12.23.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.6.3",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
     "styled-components": "^6.1.19",
     "tailwind-merge": "^3.3.1"
   },

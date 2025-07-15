@@ -1,7 +1,9 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
 import { blogPosts } from "./data/Blogdata";
-import BlogHeader from "./BlogHeader";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -42,6 +44,7 @@ const BlogPost = () => {
 
           <article className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden">
             <div className="p-8 md:p-12">
+              {/* data */}
               <div className="flex items-center space-x-6 mb-6 text-blue-400/60 text-sm">
                 <div className="flex items-center space-x-2">
                   <Calendar className="w-4 h-4" />
@@ -69,14 +72,13 @@ const BlogPost = () => {
                   </span>
                 ))}
               </div>
-              <div className="prose prose-invert prose-blue max-w-none">
-                <div className="text-slate-300 leading-relaxed space-y-6">
-                  {post.content.split("\n\n").map((paragraph, index) => (
-                    <p key={index} className="text-lg leading-8">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
+              <div className="prose prose-invert prose-blue max-w-none text-slate-300 prose-img:rounded-lg prose-a:text-blue-400 prose-a:hover:text-blue-300 prose-headings:text-white prose-li:marker:text-blue-300">
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeRaw]}
+                >
+                  {post.content}
+                </ReactMarkdown>
               </div>
             </div>
           </article>
