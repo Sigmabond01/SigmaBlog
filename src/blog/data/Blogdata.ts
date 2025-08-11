@@ -154,6 +154,90 @@ KIBAN - <a href="https://kiban-one.vercel.app" target="_blank">https://kiban-one
   date: "2025-07-20",
   readTime: "3 min read",
   tags: ["Immersion", "Japanese", "Language Learning"]
-}
+},
+{
+  id: "what-is-electricity",
+  title: "What Actually is Electricity? Not What School Teaches",
+  titleJapanese: "電気とは何か？学校で教えてくれない真実",
+  excerpt: "At its heart, electricity is the flow of electric charge. Think of it in a way that might seem familiar – perhaps analogous to atoms.",
+  content: 
+`<p>Before we dive in, it's important to understand the groundwork. To truly manage and utilize electricity, we need three main building blocks. We also convert 'SFE' [likely "Some Form of Energy"] into electricity – but what exactly do we do in this process? We rely on measurement tools like multimeters, ammeters, and voltmeters to understand what's happening.</p>
 
+<br />
+<hr />
+<br />
+
+<p><strong>What Exactly IS Electricity?</strong></p>
+<br />
+<p>At its heart, electricity is the flow of electric charge. Think of it in a way that might seem familiar – perhaps analogous to atoms. Atoms contain three primary particles: electrons, protons, and neutrons.</p>
+<p>Crucially, every atom must have both electrons and protons. However, electrons are critical to the creation of electricity. In a stable and balanced atom, the number of electrons orbiting the nucleus is the same as the number of protons within it.</p>
+<br/>
+<p>The electrons located in the outermost orbit of an atom are called valence electrons. With enough external force applied, a valence electron can actually escape its orbit and become free.</p>
+<p>These free electrons are what allow us to move charge, and this movement of charge is precisely what we know as electricity.</p>
+
+<br />
+
+<h1><strong>Understanding Charge, Voltage, Current, and Resistance</strong></h1>
+<br/>
+<p>It's important to clarify that it's not charge itself that we directly harness to do work. Instead, our electrical devices work by harnessing the movement of electrons.</p>
+<p>Voltage can be understood as the difference in charge between two distinct points. It's the electrical "pressure" that motivates charge to move.</p>
+<p>Current, on the other hand, is the rate at which this charge is flowing. It tells us how much charge passes a given point in a specific amount of time.</p>
+<p>Finally, resistance is a property of a material that describes its tendency to resist the flow of current (charge). Some materials allow charge to flow easily, while others impede its movement.</p>
+
+<br />
+
+<h3><strong>The Water Tank Analogy</strong></h3>
+<br />
+<hr />
+<br />
+<img src="https://th.bing.com/th/id/R.65ed2269058a6b925421701f17d34652?rik=9ZCx8V7TXfBvjQ&riu=http%3a%2f%2fsynopticproducts.com%2fcdn%2fshop%2farticles%2fWater-tank-example.png%3fv%3d1678728612&ehk=Ojgu6m0HHpjI3yOKsKjGlbG3MINfMJyiKIBXfocFMSg%3d&risl=&pid=ImgRaw&r=0" alt="Electricity Visual" class="w-full rounded-lg shadow-md" />
+<br />
+<hr />
+<br />
+<p>To visualize these concepts, consider a helpful analogy: a water tank system.</p>
+<p>Pressure in the water tank corresponds to Voltage.</p>
+<p>The amount of water in the tank represents Charge.</p>
+<p>The hose through which water flows is analogous to Resistance.</p>
+<br/>
+<p>The more water you have in the tank (higher charge), the greater the pressure exerted at the end of the hose (higher voltage). If you drain some water, the pressure at the hose decreases (lower voltage).</p>
+<p>Now, let's think about the flow. The amount of water flowing through the hose is like current. A higher pressure leads to a higher flow rate, and vice-versa.</p>
+<br/>
+<p>Imagine having two hoses: one narrow and one wide. The flow rate will be lower in the narrow hose compared to the wider one, assuming the same water pressure. If you want to achieve the same flow rate through the narrow hose as the wider one, you would need to increase the amount of water in the tank, thereby increasing the pressure and "pushing" more water through the restriction. This increase in pressure (voltage) at the end of the narrow hose allows more water to flow through it.</p>
+<br/>
+<p>This brings us to the idea of resistance. Consider the two hoses again. It's harder to force a certain volume of water through a narrow pipe than a wide one at the same pressure. The narrow pipe "resists" the flow of water. Similarly, in electrical devices, a higher resistance means a lower flow of charge.</p>
+
+<br />
+
+<h3><strong>Ohm's Law: The Relationship</strong></h3>
+<br />
+<hr />
+<br />
+<img src="https://tse1.mm.bing.net/th/id/OIP.ApB-jLtUbZ5Ksp5cLeL_7QAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Electricity Visual" class="w-full rounded-lg shadow-md" />
+<br />
+<hr />
+<br />
+<p>These three fundamental concepts – Voltage (V), Current (I), and Resistance (R) – are interconnected through a crucial relationship known as Ohm's Law:</p>
+<pre>V=IR</pre>
+<p>This simple equation tells us that the voltage across a conductor is directly proportional to the current flowing through it, provided the temperature remains constant.</p>
+<p>We can also express this relationship in practical terms:</p>
+<p>1V=1A⋅1Ω (One Volt is the potential difference required to drive one Ampere of current through a resistance of one Ohm).</p>
+
+<br />
+
+<p>Let's consider some examples from the notes:</p>
+<p>1V=?A⋅2Ω  To find the current (?), we can rearrange Ohm's Law: I=V/R. So, I=1V/2Ω=0.5A.</p>
+<p>1V=0.5A⋅2Ω This confirms the relationship. If you have a voltage of 1 Volt and a resistance of 2 Ohms, the current flowing will be 0.5 Amperes.</p>
+
+<br />
+
+<p>This foundational understanding of charge, voltage, current, and resistance, along with their relationship defined by Ohm's Law, provides a crucial stepping stone for comprehending the fascinating world of electricity.</p>
+
+<br />
+<hr />
+<br />
+`,
+  date: "2025-08-11",
+  readTime: "5 min read",
+  tags: ["Electricity", "Physics", "Engineering Fundamentals"]
+}
 ];
