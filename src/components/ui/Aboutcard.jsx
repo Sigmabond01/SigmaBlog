@@ -27,12 +27,12 @@ const Aboutcard = () => {
             <div className="space-y-6 text-blue-200">
               <Card
                 color="cyan"
-                title="選択的に共有 • Selective Sharing"
+                title="役立つことだけ共有 • Selective Sharing"
                 text="This is where I write about the stuff worth writing about. Not everything makes it here — just the things that might be useful to someone else or interesting enough to revisit later."
               />
               <Card
                 color="cyan"
-                title="何が発表されるか • What I Post"
+                title="投稿内容について • What I Post"
                 text="I'm picky about what gets published. I only write blogs when I have something that might actually help someone — or that I’d want to reference again in six months."
               />
               <Card
@@ -58,7 +58,7 @@ const Aboutcard = () => {
               <p className="text-gray-400 text-xs md:text-sm italic leading-relaxed">
                 I hope you enjoy the content I share here (^_^)
                 <br />
-                <span className="text-cyan-400">必要なことだけ。</span>Only what's necessary.
+                <span className="text-cyan-400">必要なことのみ</span>Only what's necessary.
               </p>
             </div>
           </div>
